@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DailyObjects · Birthday Campaign Weekend RCA</title>
+<style>
+  :root{
+    --ink:#15171a; --muted:#5b6470; --line:#e3e6ea; --bg:#f4f5f7;
+    --brand:#0b6b3a; --brandsoft:#e6f3ec; --accent:#c0392b; --accentsoft:#fcebe9;
+    --gold:#b8860b; --goldsoft:#fbf3df; --blue:#1f6feb; --bluesoft:#e8f0fe;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.4}
+  .deck{max-width:1180px;margin:0 auto;padding:28px 18px 60px}
+  .slide{background:#fff;border:1px solid var(--line);border-radius:14px;
+    box-shadow:0 6px 24px rgba(20,30,40,.06);padding:38px 44px;margin:0 0 26px;
+    aspect-ratio:16/9;display:flex;flex-direction:column;overflow:hidden}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);font-weight:700}
+  h1{font-size:38px;line-height:1.08;letter-spacing:-.01em;margin:10px 0 6px}
+  h2{font-size:27px;letter-spacing:-.01em;margin:6px 0 4px}
+  .sub{color:var(--muted);font-size:15px;margin-bottom:14px}
+  .answer{font-size:21px;line-height:1.42;font-weight:500;margin:18px 0}
+  .answer b{color:var(--brand)}
+  .hl{background:var(--goldsoft);padding:1px 5px;border-radius:4px;font-weight:700}
+  .grid{display:grid;gap:14px;flex:1}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:1.05fr .95fr}
+  .kpi{border:1px solid var(--line);border-radius:11px;padding:16px 16px;display:flex;flex-direction:column;justify-content:center;background:#fbfcfd}
+  .kpi .n{font-size:34px;font-weight:800;letter-spacing:-.02em;line-height:1}
+  .kpi .l{font-size:12.5px;color:var(--muted);margin-top:7px;line-height:1.3}
+  .kpi.pos .n{color:var(--brand)} .kpi.neg .n{color:var(--accent)} .kpi.flat .n{color:var(--muted)}
+  .card{border:1px solid var(--line);border-radius:11px;padding:16px 18px;background:#fff;display:flex;flex-direction:column}
+  .card h3{font-size:15px;margin-bottom:9px;display:flex;align-items:center;gap:8px}
+  .tag{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:.03em}
+  .tag.hi{background:var(--brandsoft);color:var(--brand)}
+  .tag.md{background:var(--goldsoft);color:var(--gold)}
+  ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+  li{font-size:13.5px;color:#2b3037;padding-left:16px;position:relative;line-height:1.36}
+  li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--brand)}
+  li.x::before{background:var(--accent)}
+  li b{color:var(--ink)}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line)}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  tr.tot td{border-top:2px solid var(--ink);font-weight:800;border-bottom:none}
+  .up{color:var(--brand);font-weight:700} .down{color:var(--accent);font-weight:700}
+  .bar{height:10px;border-radius:6px;background:var(--brand)}
+  .barrow{display:grid;grid-template-columns:118px 1fr 64px;align-items:center;gap:10px;margin:6px 0;font-size:12.5px}
+  .barrow .v{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+  .track{background:#eef0f3;border-radius:6px;overflow:hidden}
+  .foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+  .note{font-size:11.5px;color:var(--muted);margin-top:8px;font-style:italic}
+  .callout{background:var(--accentsoft);border-left:4px solid var(--accent);border-radius:8px;padding:13px 16px;font-size:14px;line-height:1.42}
+  .callout b{color:var(--accent)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1}
+  .pill{display:inline-block;font-size:11px;font-weight:700;color:var(--brand);background:var(--brandsoft);padding:3px 10px;border-radius:20px}
+  @media print{
+    body{background:#fff} .deck{max-width:none;padding:0}
+    .slide{border:none;border-radius:0;box-shadow:none;margin:0;page-break-after:always;height:100vh;aspect-ratio:auto}
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- SLIDE 1 -->
+  <section class="slide">
+    <div class="kicker">DailyObjects · Birthday Campaign · Weekend RCA</div>
+    <h1>Why revenue spiked over the weekend</h1>
+    <div class="sub">Fri 26 – Sun 28 Jun 2026 vs same weekday prior week · Source: Daily MIS + 172k-row website line-item dump</div>
+
+    <div class="answer">
+      The weekend was an <b>order-volume &amp; conversion event — not a basket event.</b>
+      ~50% more orders closed; that was <b>≈75% conversion lift</b> and <b>≈25% traffic</b>.
+      <span class="hl">AOV and basket size did not move.</span> The campaign ignited demand via a near-universal
+      free birthday gift + a heavy WhatsApp/Email/Push CRM blitz + scaled-yet-more-efficient paid media.
+    </div>
+
+    <div class="grid g4">
+      <div class="kpi pos"><div class="n">+49.5%</div><div class="l">Revenue<br>₹8.70M → ₹13.01M</div></div>
+      <div class="kpi pos"><div class="n">+49.9%</div><div class="l">Orders<br>3,222 → 4,830</div></div>
+      <div class="kpi pos"><div class="n">+35%</div><div class="l">Conversion rate<br>orders / session</div></div>
+      <div class="kpi flat"><div class="n">−0.6%</div><div class="l">AOV — essentially flat<br>₹2,701 → ₹2,693</div></div>
+    </div>
+
+    <div class="callout" style="margin-top:14px">
+      <b>The data trap:</b> The MIS shows units/order doubling 1.4 → 2.7. It’s an artefact — the free gift is booked as a <b>₹0 line item</b>.
+      Strip it out and <b>paid units/order is flat at ~1.5 all month</b>, spike days included. Revenue growth ≈ order growth, full stop.
+    </div>
+
+    <div class="foot"><span>Birthday Campaign Revenue Spike — Root Cause Analysis</span><span>1 / 4</span></div>
+  </section>
+
+  <!-- SLIDE 2 -->
+  <section class="slide">
+    <div class="kicker">Growth Decomposition</div>
+    <h2>The spike was conversion, not bigger baskets</h2>
+    <div class="sub">Revenue = Sessions × Conversion × AOV · weekend vs prior weekend (+49.5%)</div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>What moved the +49.5%</h3>
+        <div class="barrow"><span>Conversion ↑</span><div class="track"><div class="bar" style="width:96%"></div></div><span class="v up">~74%</span></div>
+        <div class="barrow"><span>Traffic ↑</span><div class="track"><div class="bar" style="width:34%"></div></div><span class="v up">~26%</span></div>
+        <div class="barrow"><span>AOV / basket</span><div class="track"><div class="bar" style="width:3%;background:#c0392b"></div></div><span class="v down">~−1%</span></div>
+        <div class="note">Sessions +10.8% · Orders/session +35.3% · AOV −0.6%.<br>1.108 × 1.353 × 0.994 = 1.49 ✓</div>
+        <table style="margin-top:14px">
+          <tr><th>Same-weekday</th><th class="num">Prior</th><th class="num">Campaign</th><th class="num">Δ</th></tr>
+          <tr><td>Sessions</td><td class="num">640,653</td><td class="num">710,109</td><td class="num up">+11%</td></tr>
+          <tr><td>Orders</td><td class="num">3,222</td><td class="num">4,830</td><td class="num up">+50%</td></tr>
+          <tr><td>Conversion</td><td class="num">0.50%</td><td class="num">0.68%</td><td class="num up">+35%</td></tr>
+          <tr><td>AOV</td><td class="num">₹2,701</td><td class="num">₹2,693</td><td class="num down">−0.6%</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Why did conversion improve? <span class="tag md">Hypothesis · evidence-backed</span></h3>
+        <ul>
+          <li><b>Free “birthday gift with every order” offer &amp; messaging</b> — the single biggest changed variable. Gift attach went <b>19% → 99.9%</b> of orders. <span class="pill">40–55%</span></li>
+          <li><b>CRM blitz</b> (WhatsApp O3+/O1, Push, Email) drove <b>₹1.16M click-through / 353 orders</b> of warm, ready-to-buy intent. <span class="pill">20–30%</span></li>
+          <li><b>Paid-media efficiency</b> — Meta ROAS +24%, Google +33% at only +21% spend. Better offer converted the same clicks. <span class="pill">15–25%</span></li>
+          <li><b>New premium SKU launches</b> (Qi2 power-banks, 0 → ₹630k) gave high-AOV reasons to buy &amp; qualify. <span class="pill">5–10%</span></li>
+        </ul>
+        <div class="note">Sub-drivers overlap — offer, CRM &amp; paid jointly produced the conversion lift and can’t be cleanly split without a holdout test.</div>
+      </div>
+    </div>
+
+    <div class="foot"><span>Conversion did the heavy lifting · traffic secondary · AOV flat</span><span>2 / 4</span></div>
+  </section>
+
+  <!-- SLIDE 3 -->
+  <section class="slide">
+    <div class="kicker">The Mechanics · Evidence</div>
+    <h2>How the campaign actually converted demand</h2>
+    <div class="sub">Free-gift mechanic · ₹4,499 threshold bunching · category &amp; channel winners</div>
+
+    <div class="grid g3">
+      <div class="card">
+        <h3>① Gift went universal <span class="tag hi">High</span></h3>
+        <table>
+          <tr><th>Period</th><th class="num">% orders w/ gift</th></tr>
+          <tr><td>Jun 20–25 (₹4,499)</td><td class="num">~19%</td></tr>
+          <tr><td>Fri Jun 26</td><td class="num up">79%</td></tr>
+          <tr><td>Sat Jun 27</td><td class="num up">99%</td></tr>
+          <tr><td>Sun Jun 28</td><td class="num up">99.9%</td></tr>
+        </table>
+        <div class="note">Repackaged from a threshold reward into a near-universal gift — a pure conversion lever (booked at ₹0).</div>
+      </div>
+
+      <div class="card">
+        <h3>② Threshold bunching <span class="tag hi">High</span></h3>
+        <table>
+          <tr><th>Basket band</th><th class="num">Prior</th><th class="num">Camp</th></tr>
+          <tr><td>₹4,000–4,498 <span style="color:#5b6470">(below)</span></td><td class="num">166</td><td class="num down">74</td></tr>
+          <tr><td>₹4,499–4,999 ★ <span style="color:#5b6470">(above)</span></td><td class="num">98</td><td class="num up">229</td></tr>
+          <tr><td>₹5,000–5,999</td><td class="num">186</td><td class="num up">300</td></tr>
+        </table>
+        <div class="note">“Just-below” collapsed, “just-above” doubled — customers added items to qualify. Causal, not correlation.</div>
+      </div>
+
+      <div class="card">
+        <h3>③ Category winners <span class="tag hi">High</span></h3>
+        <div class="barrow"><span>Wireless Charger</span><div class="track"><div class="bar" style="width:100%"></div></div><span class="v">23%</span></div>
+        <div class="barrow"><span>Designer Cases</span><div class="track"><div class="bar" style="width:82%"></div></div><span class="v">19%</span></div>
+        <div class="barrow"><span>Backpacks</span><div class="track"><div class="bar" style="width:35%"></div></div><span class="v">8%</span></div>
+        <div class="barrow"><span>Organisers</span><div class="track"><div class="bar" style="width:29%"></div></div><span class="v">7%</span></div>
+        <div class="barrow"><span>Phone Lanyards</span><div class="track"><div class="bar" style="width:28%"></div></div><span class="v">7%</span></div>
+        <div class="note">% of +₹4.31M growth. Power-banks (₹5–9k MagSafe Qi2, 3 new launches 0→₹631k) are the qualification engine.</div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:14px;background:var(--bluesoft);border-color:var(--blue)">
+      <b style="color:var(--blue)">Channel proof:</b> Paid was scaled <b>and</b> got more efficient — Meta spend +21% → revenue +51% (ROAS 3.07→3.82);
+      Google spend +22% → revenue +62% (ROAS 4.55→6.04). CRM (WhatsApp ROMS 3.2) primed the warm pools paid then retargeted. App sessions +28–33% (6–7× CVR).
+    </div>
+
+    <div class="foot"><span>Broad-based demand · poles = high-AOV qualifiers + cheap attach (lanyards 44→5,437 units)</span><span>3 / 4</span></div>
+  </section>
+
+  <!-- SLIDE 4 -->
+  <section class="slide">
+    <div class="kicker">What Worked · Playbook · Next Tests</div>
+    <h2>Repeat the demand engine — fix the margin leak</h2>
+
+    <div class="two">
+      <div class="card">
+        <h3>✅ What worked — ranked</h3>
+        <ul>
+          <li><b>Universal “free birthday gift” offer + messaging</b> — biggest conversion lever.</li>
+          <li><b>CRM blitz</b> — WhatsApp O3+/O1 the workhorse (CTR 8–10%, ROMS 3.2); warm-intent fuel + paid amplifier.</li>
+          <li><b>More efficient paid media</b> — ROAS ↑ at scaled spend, not just bigger budgets.</li>
+          <li><b>₹4,499 threshold + new premium power-banks</b> — basket trade-up engine (~10–16% of growth).</li>
+          <li class="x"><b>Did NOT work as levers:</b> basket size, AOV, discounting — by design there was no sitewide discount.</li>
+        </ul>
+        <div class="callout" style="margin-top:12px">
+          <b>Margin flag:</b> a gift on <b>99.9%</b> of orders is unbudgeted COGS and kills the trade-up incentive. Re-gate it to a threshold.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🎂 Birthday Playbook + experiments</h3>
+        <ul>
+          <li><b>Keep the gift as a CVR device — but re-anchor to a threshold</b> (test ₹2,999 vs ₹4,499) so it lifts conversion <i>and</i> AOV.</li>
+          <li><b>Lead with WhatsApp O3+/O1</b> to warm audiences, then scale paid into proven demand. Cut Email-to-O1/RNB (11% open) &amp; Push Mystery-Gift-2.</li>
+          <li><b>Time premium SKU launches just above the threshold</b>; add a “₹X more unlocks your gift” cart nudge.</li>
+          <li><b>Always report paid units/order &amp; same-weekday</b> — never let ₹0 gift lines fake basket growth.</li>
+        </ul>
+        <div class="note" style="margin-top:auto">
+          <b>Next-sale tests:</b> (1) geo/audience <b>holdout</b> to measure gift incrementality · (2) threshold A/B for the CVR-vs-AOV-vs-margin optimum · (3) CRM suppression holdout · (4) connect GA4 channel + funnel + user-type to close the New-vs-Returning / ATC-vs-checkout gaps.
+        </div>
+      </div>
+    </div>
+
+    <div class="foot"><span>The spike was volume — achieved without discounts. Protect margin; drive volume via offer + CRM.</span><span>4 / 4</span></div>
+  </section>
+
+</div>
+</body>
+</html>
